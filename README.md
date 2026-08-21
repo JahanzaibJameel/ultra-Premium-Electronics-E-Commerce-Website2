@@ -67,7 +67,7 @@ Built with pure HTML, Tailwind CSS, and vanilla JavaScript, it requires no build
 
 ```bash
 git clone https://github.com/ultra-Premium-Electronics-E-Commerce-Website2/quantumtech.git
-cd quantumtech
+cd ultra-Premium-Electronics-E-Commerce-Website2
 ```
 
 #### 2. Open the Project
