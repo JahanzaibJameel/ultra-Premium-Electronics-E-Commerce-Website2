@@ -66,7 +66,7 @@ Built with pure HTML, Tailwind CSS, and vanilla JavaScript, it requires no build
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/quantumtech.git
+git clone https://github.com/ultra-Premium-Electronics-E-Commerce-Website2/quantumtech.git
 cd quantumtech
 ```
 
