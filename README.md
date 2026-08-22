@@ -75,7 +75,6 @@ Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requi
 
 **Live Demo:** https://quantumtech-demo.netlify.app *(replace with your actual URL)*
 
-![QuantumTech Demo GIF](https://via.placeholder.com/800x400?text=QuantumTech+Demo+GIF)
 
 ---
 
