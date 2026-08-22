@@ -260,14 +260,6 @@ The current implementation simulates product loading with a spinner and placehol
 }
 ```
 
----
-
-
-
----
-
----
-
 ## 🚀 Deployment
 
 ### Option 1: GitHub Pages
