@@ -72,8 +72,6 @@ Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requi
 ---
 
 
----
-
 ## 🛠️ Tech Stack
 
 | Layer         | Technology                      | Version |
