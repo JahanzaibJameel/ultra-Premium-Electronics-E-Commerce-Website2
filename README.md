@@ -400,11 +400,6 @@ See the `LICENSE` file for more information.
 
 ---
 
-**Project Link:**
-https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2
-
----
-
 <div align="center">
 
 Made with 💜 and a lot of ☕ by <a href="https://github.com/JahanzaibJameel">Muhammad Jahanzaib Jameel</a>
