@@ -323,7 +323,7 @@ describe('Cart Sidebar', () => {
 
 ### Option 3: Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/quantumtech)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2)
 
 ---
 
