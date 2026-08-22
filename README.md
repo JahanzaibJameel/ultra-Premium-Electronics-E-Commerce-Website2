@@ -16,7 +16,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/your-username/quantumtech?style=flat-square\&color=purple)](https://github.com/your-username/quantumtech/commits/main)
 [![GitHub stars](https://img.shields.io/github/stars/your-username/quantumtech?style=flat-square\&color=yellow)](https://github.com/your-username/quantumtech/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/your-username/quantumtech?style=flat-square\&color=orange)](https://github.com/your-username/quantumtech/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/your-username/quantumtech?style=flat-square\&color=red)](https://github.com/your-username/quantumtech/issues)
+
 
 
 </div>
