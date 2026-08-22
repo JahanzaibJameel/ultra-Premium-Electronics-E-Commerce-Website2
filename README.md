@@ -282,19 +282,6 @@ npm init -y
 # Install testing libraries
 npm install --save-dev jest @testing-library/dom cypress
 ```
-
-### Example Jest Test
-
-```javascript
-test('cart total calculates correctly', () => {
-  document.body.innerHTML = `<div id="cart-total"></div>`;
-  updateCartTotal();
-
-  expect(document.getElementById('cart-total').textContent).toBe('$0.00');
-});
-```
-
-
 ---
 
 ## 🚀 Deployment
