@@ -419,7 +419,7 @@ See the `LICENSE` file for more information.
 **Your Name** — [@your_twitter](https://twitter.com/your_twitter) — [email@example.com](mailto:email@example.com)
 
 **Project Link:**
-https://github.com/your-username/quantumtech
+https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2
 
 ---
 
