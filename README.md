@@ -414,10 +414,6 @@ See the `LICENSE` file for more information.
 
 ---
 
-## 📬 Contact
-
-**Your Name** — [@your_twitter](https://twitter.com/your_twitter) — 
-
 **Project Link:**
 https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2
 
