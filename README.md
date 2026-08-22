@@ -353,18 +353,6 @@ See the `LICENSE` file for more information.
 
 ---
 
-## 👥 Contributors
-
-<div align="center">
-
-<a href="https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=your-JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2" alt="Contributors" />
-</a>
-
-</div>
-
----
-
 <div align="center">
 
 Made with 💜 and a lot of ☕ by <a href="https://github.com/JahanzaibJameel">Muhammad Jahanzaib Jameel</a>
