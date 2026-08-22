@@ -267,21 +267,7 @@ The current implementation simulates product loading with a spinner and placehol
 
 ---
 
-## 🔒 Security
 
-* No server-side code; static files only.
-* Content Security Policy (CSP) recommended for production.
-* External libraries loaded via CDN with pinned versions.
-* No user data stored or transmitted.
-
-For production, consider adding:
-
-```html
-<meta
-  http-equiv="Content-Security-Policy"
-  content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://kit.fontawesome.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
->
-```
 
 ---
 
