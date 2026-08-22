@@ -73,7 +73,6 @@ Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requi
 
 ## 🖼️ Demo
 
-**Live Demo:** https://quantumtech-demo.netlify.app *(replace with your actual URL)*
 
 
 ---
