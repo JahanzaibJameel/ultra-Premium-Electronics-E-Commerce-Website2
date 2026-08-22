@@ -71,7 +71,6 @@ Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requi
 
 ---
 
-## 🖼️ Demo
 
 ---
 
