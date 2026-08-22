@@ -271,17 +271,6 @@ The current implementation simulates product loading with a spinner and placehol
 
 ---
 
-## 🧪 Testing
-
-Although the project is static, you can add basic testing with modern tools.
-
-```bash
-# Initialize a package (optional)
-npm init -y
-
-# Install testing libraries
-npm install --save-dev jest @testing-library/dom cypress
-```
 ---
 
 ## 🚀 Deployment
