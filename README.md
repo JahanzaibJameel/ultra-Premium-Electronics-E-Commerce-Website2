@@ -20,7 +20,6 @@
 
 * [🌟 Overview](#-overview)
 * [✨ Features](#-features)
-* [🖼️ Demo](#️-demo)
 * [🛠️ Tech Stack](#️-tech-stack)
 * [🚀 Getting Started](#-getting-started)
 * [📁 Project Structure](#-project-structure)
@@ -28,15 +27,11 @@
 * [📱 Responsive Behavior](#-responsive-behavior)
 * [🌐 Browser Support](#-browser-support)
 * [🧪 Performance & Accessibility](#-performance--accessibility)
-* [🔒 Security](#-security)
-* [🧪 Testing](#-testing)
 * [🚀 Deployment](#-deployment)
 * [🤝 Contributing](#-contributing)
 * [🔮 Roadmap](#-roadmap)
 * [📄 License](#-license)
 * [🙏 Acknowledgments](#-acknowledgments)
-* [👥 Contributors](#-contributors)
-* [📬 Contact](#-contact)
 
 ---
 
