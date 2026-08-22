@@ -294,17 +294,6 @@ test('cart total calculates correctly', () => {
 });
 ```
 
-### Example Cypress E2E Test
-
-```javascript
-describe('Cart Sidebar', () => {
-  it('opens and closes', () => {
-    cy.visit('/');
-    cy.get('[data-open-cart]').click();
-    cy.get('.cart-sidebar').should('be.visible');
-  });
-});
-```
 
 ---
 
