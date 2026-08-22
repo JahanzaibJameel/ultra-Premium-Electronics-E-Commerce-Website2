@@ -220,8 +220,6 @@ The current implementation simulates product loading with a spinner and placehol
 | Edge (latest)    | ✅         |
 | Opera (latest)   | ✅         |
 
-> **Note:** Visual effects such as `backdrop-filter` may require fallbacks in older browsers.
-
 ---
 
 ## 🧪 Performance & Accessibility
