@@ -425,7 +425,7 @@ https://github.com/your-username/quantumtech
 
 <div align="center">
 
-Made with 💜 and a lot of ☕ by <a href="https://github.com/your-username">Your Name</a>
+Made with 💜 and a lot of ☕ by <a href="https://github.com/JahanzaibJameel">Muhammad Jahanzaib Jameel</a>
 
 <br />
 
