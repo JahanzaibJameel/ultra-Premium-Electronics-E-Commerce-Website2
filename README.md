@@ -15,7 +15,7 @@
 [![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)](https://github.com/your-username/quantumtech/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/your-username/quantumtech?style=flat-square\&color=purple)](https://github.com/your-username/quantumtech/commits/main)
 [![GitHub stars](https://img.shields.io/github/stars/your-username/quantumtech?style=flat-square\&color=yellow)](https://github.com/your-username/quantumtech/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/quantumtech?style=flat-square\&color=orange)](https://github.com/your-username/quantumtech/network/members)
+
 
 
 
