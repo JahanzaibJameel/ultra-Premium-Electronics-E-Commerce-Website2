@@ -319,7 +319,7 @@ describe('Cart Sidebar', () => {
 
 ### Option 2: Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/quantumtech)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2)
 
 ### Option 3: Vercel
 
