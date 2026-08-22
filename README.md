@@ -1,6 +1,8 @@
 # ⚛️ QuantumTech — Futuristic Electronics Marketplace
 
-> **A modern, high-performance electronics storefront landing page built for the future of e-commerce.**
+<div align="center">
+
+**A modern, high-performance electronics storefront landing page built for the future of e-commerce.**
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge\&logo=tailwind-css\&logoColor=white)](https://tailwindcss.com/)
@@ -10,47 +12,97 @@
 [![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge\&logo=fontawesome\&logoColor=white)](https://fontawesome.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
+[![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)](https://github.com/your-username/quantumtech/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/your-username/quantumtech?style=flat-square\&color=purple)](https://github.com/your-username/quantumtech/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/your-username/quantumtech?style=flat-square\&color=yellow)](https://github.com/your-username/quantumtech/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/your-username/quantumtech?style=flat-square\&color=orange)](https://github.com/your-username/quantumtech/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/your-username/quantumtech?style=flat-square\&color=red)](https://github.com/your-username/quantumtech/issues)
+[![Netlify Status](https://img.shields.io/netlify/your-site-id?style=flat-square\&logo=netlify\&logoColor=white)](https://app.netlify.com/sites/your-site-id/deploys)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+* [🌟 Overview](#-overview)
+* [✨ Features](#-features)
+* [🖼️ Demo](#️-demo)
+* [🛠️ Tech Stack](#️-tech-stack)
+* [🚀 Getting Started](#-getting-started)
+* [📁 Project Structure](#-project-structure)
+* [🎨 Customization Guide](#-customization-guide)
+* [📱 Responsive Behavior](#-responsive-behavior)
+* [🌐 Browser Support](#-browser-support)
+* [🧪 Performance & Accessibility](#-performance--accessibility)
+* [🔒 Security](#-security)
+* [🧪 Testing](#-testing)
+* [🚀 Deployment](#-deployment)
+* [🤝 Contributing](#-contributing)
+* [🔮 Roadmap](#-roadmap)
+* [📄 License](#-license)
+* [🙏 Acknowledgments](#-acknowledgments)
+* [👥 Contributors](#-contributors)
+* [📬 Contact](#-contact)
+
 ---
 
 ## 🌟 Overview
 
-**QuantumTech** is a sleek, responsive, and interactive electronics marketplace landing page. It combines modern design trends like glassmorphism, parallax scrolling, 3D transforms, animated gradients, and micro-interactions to deliver a futuristic shopping experience.
+**QuantumTech** is a sleek, responsive, and interactive electronics marketplace landing page. It combines modern design trends such as **glassmorphism**, **parallax scrolling**, **3D transforms**, **animated gradients**, and **micro-interactions** to deliver a futuristic shopping experience.
 
-Built with pure HTML, Tailwind CSS, and vanilla JavaScript, it requires no build step and runs instantly in any modern browser.
+Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requires **no build step** and runs instantly in any modern browser. It is perfect for prototyping, learning, or serving as a production-ready static storefront foundation.
+
+<div align="center">
+  <img src="https://via.placeholder.com/800x400?text=QuantumTech+Screenshot" alt="QuantumTech Screenshot" width="800" />
+  <p><sub>Replace with an actual project screenshot or GIF.</sub></p>
+</div>
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-* 🚀 **Announcement Marquee** — Smooth infinite-scrolling promotions bar.
-* 🧊 **Glassmorphism Header** — Sticky navigation with backdrop blur and gradient highlights.
-* 🔍 **Floating Label Search** — Elegant search input with animated focus states.
-* 🛒 **Interactive Cart Sidebar** — Slide-out cart with quantity controls, promo code field, and dynamic totals.
-* ❤️ **Wishlist Toggle** — Heart micro-interaction with count badge.
-* 🎠 **Splide Carousel** — Responsive featured products slider with breakpoints.
-* 🧊 **3D Tech Showcase** — Rotating image card with perspective and backface visibility.
-* ⏳ **Live Countdown Timer** — Real-time sales deadline countdown.
-* 🧪 **Product Quick View Modal** — Gallery sync, options selection, and add-to-cart functionality.
-* 📱 **Mobile-First Navigation** — Slide-down menu with smooth animations.
-* ✨ **Scroll Animations (AOS)** — Fade, slide, and reveal effects on scroll.
-* 🎨 **Dynamic Gradient Backgrounds** — Continuously rotating hue effects.
-* 🖱️ **Custom Scrollbar** — Styled for an enhanced user experience.
-* 🔝 **Back-to-Top Button** — Floating button that appears after scrolling.
-* 🌙 **Noise Texture Overlay** — Subtle grain effect for a modern aesthetic.
+| Feature                             | Description                                                                  |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| 🚀 **Announcement Marquee**         | Smooth infinite-scrolling promotions bar.                                    |
+| 🧊 **Glassmorphism Header**         | Sticky navigation with backdrop blur and gradient highlights.                |
+| 🔍 **Floating Label Search**        | Elegant search input with animated focus states.                             |
+| 🛒 **Interactive Cart Sidebar**     | Slide-out cart with quantity controls, promo code field, and dynamic totals. |
+| ❤️ **Wishlist Toggle**              | Heart micro-interaction with count badge.                                    |
+| 🎠 **Splide Carousel**              | Responsive featured products slider with breakpoints.                        |
+| 🧊 **3D Tech Showcase**             | Rotating image card with perspective and backface visibility.                |
+| ⏳ **Live Countdown Timer**          | Real-time sales deadline countdown.                                          |
+| 🧪 **Product Quick View Modal**     | Gallery sync, options selection, and add-to-cart functionality.              |
+| 📱 **Mobile-First Navigation**      | Slide-down menu with smooth animations.                                      |
+| ✨ **Scroll Animations (AOS)**       | Fade, slide, and reveal effects on scroll.                                   |
+| 🎨 **Dynamic Gradient Backgrounds** | Continuously rotating hue effects.                                           |
+| 🖱️ **Custom Scrollbar**            | Styled scrollbar for an enhanced user experience.                            |
+| 🔝 **Back-to-Top Button**           | Floating button that appears after scrolling.                                |
+| 🌙 **Noise Texture Overlay**        | Subtle grain effect for a modern aesthetic.                                  |
+| 🧩 **Semantic & Accessible**        | ARIA labels, keyboard navigation, and clean HTML structure.                  |
+
+---
+
+## 🖼️ Demo
+
+**Live Demo:** https://quantumtech-demo.netlify.app *(replace with your actual URL)*
+
+![QuantumTech Demo GIF](https://via.placeholder.com/800x400?text=QuantumTech+Demo+GIF)
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer         | Technology                    |
-| ------------- | ----------------------------- |
-| Markup        | HTML5                         |
-| Styling       | Tailwind CSS 2.2 + Custom CSS |
-| Interactivity | Vanilla JavaScript (ES6+)     |
-| Carousel      | Splide.js v4                  |
-| Animations    | AOS (Animate On Scroll)       |
-| Icons         | Font Awesome 6                |
-| Fonts         | Google Fonts — Poppins        |
+| Layer         | Technology                      | Version |
+| ------------- | ------------------------------- | ------- |
+| Markup        | HTML5                           | Latest  |
+| Styling       | Tailwind CSS + Custom CSS       | 2.2+    |
+| Interactivity | Vanilla JavaScript (ES6+)       | —       |
+| Carousel      | Splide.js                       | v4      |
+| Animations    | AOS (Animate On Scroll)         | 2.3.1   |
+| Icons         | Font Awesome                    | 6.0+    |
+| Fonts         | Google Fonts — Poppins          | —       |
+| Hosting       | Netlify / Vercel / GitHub Pages | —       |
 
 ---
 
@@ -59,22 +111,22 @@ Built with pure HTML, Tailwind CSS, and vanilla JavaScript, it requires no build
 ### Prerequisites
 
 * A modern web browser such as Chrome, Edge, Firefox, Safari, or Opera.
-* Optional: A local development server such as [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code.
+* Optional: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VS Code extension.
 
 ### Installation
 
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ultra-Premium-Electronics-E-Commerce-Website2/quantumtech.git
-cd ultra-Premium-Electronics-E-Commerce-Website2
+git clone https://github.com/your-username/quantumtech.git
+cd quantumtech
 ```
 
 #### 2. Open the Project
 
 Simply open `index.html` in your browser.
 
-Alternatively, run a local server:
+Alternatively, run a local development server:
 
 ```bash
 # Using Python 3
@@ -87,7 +139,7 @@ Then visit:
 http://localhost:8000
 ```
 
-That's it! No build step or dependency installation is required.
+No build step or dependency installation is required. That's it! 🎉
 
 ---
 
@@ -95,66 +147,43 @@ That's it! No build step or dependency installation is required.
 
 ```text
 quantumtech/
-├── index.html          # Main HTML file (all sections included)
-├── styles.css          # Custom CSS (animations, effects, responsive tweaks)
-├── script.js           # JavaScript (interactions, carousels, countdown)
+├── index.html          # Main HTML file
+├── styles.css          # Custom CSS and animations
+├── script.js           # JavaScript interactions
 └── README.md           # Project documentation
 ```
 
 ### Description of Files
 
-* **`index.html`**
-  Contains the complete markup for the landing page, including the header, hero section, categories, featured products, tech showcase, sale banner, comparison table, testimonials, newsletter, footer, cart sidebar, quick-view modal, and overlay elements. External libraries are loaded through CDN.
-
-* **`styles.css`**
-  Contains custom styles layered on top of Tailwind CSS. It defines keyframe animations such as `fadeIn`, `slideUp`, `float`, and `marquee`, along with 3D perspective utilities, gradient backgrounds, scrollbar styling, and responsive adjustments for ultra-small screens (≤320px).
-
-* **`script.js`**
-  Handles client-side interactivity, including:
-
-  * AOS and Splide initialization.
-  * Mobile menu management.
-  * Cart sidebar and overlay controls.
-  * Back-to-top functionality.
-  * Product quantity adjustment.
-  * Wishlist toggling.
-  * Add-to-cart animations.
-  * Dynamic cart total calculations.
-  * Countdown timer.
-  * Quick-view modal and product gallery synchronization.
-  * Parallax scrolling effects.
-  * Product filtering and search simulations.
+| File         | Description                                                                                                                                                                                                                                                                                                       |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `index.html` | Complete markup for the landing page, including header, hero, categories, featured products, tech showcase, sale banner, comparison table, testimonials, newsletter, footer, cart sidebar, quick-view modal, and overlays.                                                                                        |
+| `styles.css` | Custom styles layered on top of Tailwind CSS. Defines animations, 3D perspective utilities, gradient backgrounds, scrollbar styling, and responsive adjustments.                                                                                                                                                  |
+| `script.js`  | Handles AOS and Splide initialization, mobile navigation, cart sidebar, back-to-top functionality, quantity adjustment, wishlist toggles, add-to-cart animations, dynamic cart totals, countdown timer, quick-view modal, product gallery synchronization, parallax scrolling, filtering, and search simulations. |
 
 ---
 
 ## 🎨 Customization Guide
 
-### Change Colors
+### 🎨 Change Colors
 
-Edit the Tailwind utility classes directly inside `index.html`.
+Edit Tailwind utility classes directly inside `index.html`.
 
-For example, replace:
+**Example:** Replace `indigo-600` with `emerald-600`.
 
-```html
-indigo-600
+```diff
+- <button class="bg-indigo-600 hover:bg-indigo-700">
++ <button class="bg-emerald-600 hover:bg-emerald-700">
 ```
 
-with:
-
-```html
-emerald-600
-```
-
-For a more systematic approach, you can define a custom Tailwind configuration. However, since the project uses the CDN build, direct utility-class replacement is the simplest approach.
-
-### Update Product Data
+### 🛍️ Update Product Data
 
 Product cards are defined in the **Featured Products** section.
 
 To add or modify products:
 
 1. Duplicate a `.splide__slide` block.
-2. Update the product image.
+2. Update the product image URL.
 3. Change the product name.
 4. Update the price.
 5. Modify the product badge.
@@ -162,7 +191,7 @@ To add or modify products:
 
 The same approach can be used for the comparison table and cart items.
 
-### Modify Countdown Timer
+### ⏳ Modify Countdown Timer
 
 In `script.js`, the `updateCountdown()` function calculates the remaining time until the end of the current day.
 
@@ -173,15 +202,15 @@ const endOfDay = new Date();
 endOfDay.setHours(23, 59, 59, 999);
 ```
 
-with:
+with a custom date:
 
 ```javascript
 const endOfDay = new Date('2026-12-31T23:59:59');
 ```
 
-### Integrate a Real Backend
+### 🔌 Integrate a Real Backend
 
-Replace the placeholder functions:
+Replace placeholder functions such as:
 
 ```javascript
 searchProducts
@@ -197,10 +226,12 @@ The current implementation simulates product loading with a spinner and placehol
 
 ## 📱 Responsive Behavior
 
-* **Desktop (≥1280px):** Full navigation, four-column carousel, and side-by-side layouts.
-* **Tablet (768–1024px):** Collapsed navigation, two-column carousel, and adjusted spacing.
-* **Mobile (<768px):** Hamburger menu, single-column carousel, stacked sections, and simplified full-width cart sidebar.
-* **Ultra-small (≤320px):** Further condensed typography, smaller icons, and optimized grid layouts.
+| Breakpoint               | Behavior                                                                               |
+| ------------------------ | -------------------------------------------------------------------------------------- |
+| **Desktop (≥1280px)**    | Full navigation, four-column carousel, and side-by-side layouts.                       |
+| **Tablet (768–1024px)**  | Collapsed navigation, two-column carousel, and adjusted spacing.                       |
+| **Mobile (<768px)**      | Hamburger menu, single-column carousel, stacked sections, and full-width cart sidebar. |
+| **Ultra-small (≤320px)** | Condensed typography, smaller icons, and optimized grids.                              |
 
 ---
 
@@ -214,7 +245,7 @@ The current implementation simulates product loading with a spinner and placehol
 | Edge (latest)    | ✅         |
 | Opera (latest)   | ✅         |
 
-> **Note:** Some visual effects, such as `backdrop-filter`, may require fallbacks in older browsers.
+> **Note:** Visual effects such as `backdrop-filter` may require fallbacks in older browsers.
 
 ---
 
@@ -222,42 +253,120 @@ The current implementation simulates product loading with a spinner and placehol
 
 ### Performance
 
-* Assets are loaded through CDNs.
-* Images use browser-native lazy-loading where applicable.
-* JavaScript is kept lightweight.
-* No build process is required.
-* The project is optimized for fast browser-based execution.
+* Assets loaded via CDNs.
+* Browser-native lazy loading for images where applicable.
+* Lightweight vanilla JavaScript.
+* Zero build overhead.
+* Optimized for fast browser execution.
+
+| Metric                 | Target  |
+| ---------------------- | ------- |
+| Lighthouse Performance | ≥ 95    |
+| First Contentful Paint | ≤ 1.2s  |
+| Time to Interactive    | ≤ 2.0s  |
+| Total Bundle Size      | ≤ 150KB |
 
 ### Accessibility
 
-* Semantic HTML structure.
+* Semantic HTML5 structure.
 * ARIA labels on interactive icon buttons.
 * Keyboard-friendly focus states.
-* Descriptive image `alt` attributes.
-* Responsive layouts across screen sizes.
+* Descriptive `alt` attributes on images.
+* Responsive layouts across all screen sizes.
 
-> **Accessibility Recommendation:** Because the interface uses multiple animations, consider adding a `prefers-reduced-motion` media query to `styles.css` for users who prefer reduced motion.
+> **Recommendation:** Add a `prefers-reduced-motion` media query in `styles.css` to disable animations for users who prefer reduced motion.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
 
 ---
 
-## 🔮 Future Enhancements — 2026 Roadmap
+## 🔒 Security
 
-* [ ] **AI-Powered Product Recommendations** — Use machine learning to suggest products based on browsing behavior.
-* [ ] **Web3 Payment Gateway** — Support cryptocurrency payments through wallets such as MetaMask.
-* [ ] **AR/VR Product Previews** — Use WebXR to visualize products in real-world environments.
-* [ ] **Progressive Web App (PWA)** — Add offline support and installability.
-* [ ] **Dark/Light Mode Toggle** — Provide a user-controlled theme switcher.
-* [ ] **Voice Search** — Implement speech recognition for hands-free product discovery.
-* [ ] **Real-Time Inventory Updates** — Connect the storefront to a backend API for live stock availability.
+* No server-side code; static files only.
+* Content Security Policy (CSP) recommended for production.
+* External libraries loaded via CDN with pinned versions.
+* No user data stored or transmitted.
+
+For production, consider adding:
+
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://kit.fontawesome.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+>
+```
+
+---
+
+## 🧪 Testing
+
+Although the project is static, you can add basic testing with modern tools.
+
+```bash
+# Initialize a package (optional)
+npm init -y
+
+# Install testing libraries
+npm install --save-dev jest @testing-library/dom cypress
+```
+
+### Example Jest Test
+
+```javascript
+test('cart total calculates correctly', () => {
+  document.body.innerHTML = `<div id="cart-total"></div>`;
+  updateCartTotal();
+
+  expect(document.getElementById('cart-total').textContent).toBe('$0.00');
+});
+```
+
+### Example Cypress E2E Test
+
+```javascript
+describe('Cart Sidebar', () => {
+  it('opens and closes', () => {
+    cy.visit('/');
+    cy.get('[data-open-cart]').click();
+    cy.get('.cart-sidebar').should('be.visible');
+  });
+});
+```
+
+---
+
+## 🚀 Deployment
+
+### Option 1: GitHub Pages
+
+1. Push the project to a `gh-pages` branch.
+2. Go to **Settings → Pages**.
+3. Select the `gh-pages` branch.
+4. Save and wait for deployment.
+
+### Option 2: Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/quantumtech)
+
+### Option 3: Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/quantumtech)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions are what make the open-source community amazing. Any contributions you make are **greatly appreciated**.
 
-1. Fork the repository.
-2. Create a new feature branch:
+1. Fork the project.
+2. Create your feature branch:
 
 ```bash
 git checkout -b feature/AmazingFeature
@@ -269,7 +378,7 @@ git checkout -b feature/AmazingFeature
 git commit -m "Add some AmazingFeature"
 ```
 
-4. Push the branch:
+4. Push to the branch:
 
 ```bash
 git push origin feature/AmazingFeature
@@ -277,11 +386,27 @@ git push origin feature/AmazingFeature
 
 5. Open a Pull Request.
 
+Please ensure your code follows the existing style and passes basic checks.
+
+---
+
+## 🔮 Roadmap — 2026
+
+* [ ] **AI-Powered Product Recommendations** — ML-based suggestions from browsing behavior.
+* [ ] **Web3 Payment Gateway** — Support crypto payments through MetaMask and WalletConnect.
+* [ ] **AR/VR Product Previews** — WebXR for immersive product visualization.
+* [ ] **PWA Support** — Offline access and installability.
+* [ ] **Dark/Light Mode Toggle** — User-controlled theme switching.
+* [ ] **Voice Search** — Speech recognition for hands-free product discovery.
+* [ ] **Real-Time Inventory** — Connect to a backend API for live stock status.
+
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. See the `LICENSE` file for more information.
+Distributed under the **MIT License**.
+
+See the `LICENSE` file for more information.
 
 ---
 
@@ -297,7 +422,33 @@ Distributed under the **MIT License**. See the `LICENSE` file for more informati
 
 ---
 
-<p align="center">
-  Made with 💜 and a lot of ☕ by
-  <a href="https://github.com/your-username">Your Name</a>
-</p>
+## 👥 Contributors
+
+<div align="center">
+
+<a href="https://github.com/your-username/quantumtech/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=your-username/quantumtech" alt="Contributors" />
+</a>
+
+</div>
+
+---
+
+## 📬 Contact
+
+**Your Name** — [@your_twitter](https://twitter.com/your_twitter) — [email@example.com](mailto:email@example.com)
+
+**Project Link:**
+https://github.com/your-username/quantumtech
+
+---
+
+<div align="center">
+
+Made with 💜 and a lot of ☕ by <a href="https://github.com/your-username">Your Name</a>
+
+<br />
+
+<sub>© 2026 QuantumTech. All rights reserved.</sub>
+
+</div>
