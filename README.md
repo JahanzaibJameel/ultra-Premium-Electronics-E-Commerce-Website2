@@ -46,7 +46,6 @@
 
 Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requires **no build step** and runs instantly in any modern browser. It is perfect for prototyping, learning, or serving as a production-ready static storefront foundation.
 
-
 ---
 
 ## ✨ Features
