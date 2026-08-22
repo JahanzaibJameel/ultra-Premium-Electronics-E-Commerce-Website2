@@ -392,8 +392,8 @@ See the `LICENSE` file for more information.
 
 <div align="center">
 
-<a href="https://github.com/your-username/quantumtech/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=your-username/quantumtech" alt="Contributors" />
+<a href="https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=your-JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2" alt="Contributors" />
 </a>
 
 </div>
