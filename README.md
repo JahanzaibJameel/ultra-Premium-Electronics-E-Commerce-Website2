@@ -46,10 +46,7 @@
 
 Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requires **no build step** and runs instantly in any modern browser. It is perfect for prototyping, learning, or serving as a production-ready static storefront foundation.
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x400?text=QuantumTech+Screenshot" alt="QuantumTech Screenshot" width="800" />
-  <p><sub>Replace with an actual project screenshot or GIF.</sub></p>
-</div>
+
 
 ---
 
