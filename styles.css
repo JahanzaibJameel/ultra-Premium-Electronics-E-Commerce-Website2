@@ -1,6 +1,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
         :root {
+            /* Note: --gradient-rotation is updated by JS but not currently consumed by any CSS gradient rule (reserved for future use) */
             --gradient-rotation: 0deg;
         }
 
@@ -9,7 +10,9 @@
             overflow-x: hidden;
         }
 
-        /* Custom scrollbar */
+        /* ==================== */
+        /* Custom Scrollbar     */
+        /* ==================== */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -28,6 +31,10 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* ==================== */
+        /* Keyframe Animations  */
+        /* ==================== */
 
         /* Animation classes */
         @keyframes fadeIn {
@@ -124,6 +131,10 @@
             }
         }
 
+        /* ==================== */
+        /* Custom Animation Classes */
+        /* ==================== */
+
         /* Custom animations */
         .animate-spin-slow {
             animation: rotate 8s linear infinite;
@@ -147,6 +158,10 @@
             animation: gradientBG 15s ease infinite;
         }
 
+        /* ==================== */
+        /* 3D Perspective       */
+        /* ==================== */
+
         /* 3D perspective effects */
         .perspective-container {
             perspective: 1500px;
@@ -169,6 +184,10 @@
             backface-visibility: hidden;
         }
 
+        /* ==================== */
+        /* Marquee              */
+        /* ==================== */
+
         /* Marquee effect */
         .marquee-container {
             overflow: hidden;
@@ -181,6 +200,10 @@
             animation: marquee 20s linear infinite;
         }
 
+        /* ==================== */
+        /* Glass Morphism       */
+        /* ==================== */
+
         /* Custom glass morphism */
         .glass-effect {
             background: rgba(255, 255, 255, 0.2);
@@ -189,6 +212,10 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
+        /* ==================== */
+        /* Parallax             */
+        /* ==================== */
+
         /* Parallax effect */
         .parallax-bg {
             background-attachment: fixed;
@@ -196,6 +223,10 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        /* ==================== */
+        /* Product Hover        */
+        /* ==================== */
 
         /* Product hover effects */
         .product-hover-scale {
@@ -206,6 +237,10 @@
             transform: scale(1.03);
         }
 
+        /* ==================== */
+        /* Button Hover         */
+        /* ==================== */
+
         /* Button hover effects */
         .btn-hover-grow {
             transition: transform 0.3s ease;
@@ -214,6 +249,10 @@
         .btn-hover-grow:hover {
             transform: scale(1.05);
         }
+
+        /* ==================== */
+        /* Shadows              */
+        /* ==================== */
 
         /* Custom shadows */
         .shadow-soft {
@@ -224,23 +263,39 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
+        /* ==================== */
+        /* Floating Elements    */
+        /* ==================== */
+
         /* Floating elements */
         .floating-element {
             animation: float 6s ease-in-out infinite;
         }
 
-        /* Gradient text */
+        /* ==================== */
+        /* Gradient Text        */
+        /* ==================== */
+
+        /* Gradient text utility - requires a background or background-image property on the same element */
         .gradient-text {
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
         }
 
-        /* Noise texture */
+        /* ==================== */
+        /* Noise Texture        */
+        /* ==================== */
+
+        /* Noise texture utility - defined for reuse but the HTML currently uses inline Tailwind bg-[url(...)] equivalents */
         .noise-texture {
             background-image: url('https://grainy-gradients.vercel.app/noise.svg');
             opacity: 0.1;
         }
+
+        /* ==================== */
+        /* Custom Transitions   */
+        /* ==================== */
 
         /* Custom transitions */
         .transition-slow {
@@ -250,6 +305,10 @@
         .transition-fast {
             transition: all 0.2s ease;
         }
+
+        /* ==================== */
+        /* Splide Overrides     */
+        /* ==================== */
 
         /* Splide carousel adjustments */
         .splide__arrow {
@@ -265,12 +324,20 @@
             background: #4f46e5 !important;
         }
 
+        /* ==================== */
+        /* Responsive: 768px    */
+        /* ==================== */
+
         /* Responsive tweaks */
         @media (max-width: 768px) {
             .parallax-bg {
                 background-attachment: scroll;
             }
         }
+
+        /* ==================== */
+        /* Responsive: 320px    */
+        /* ==================== */
 
         /* 320px specific styles */
         @media (max-width: 320px) {
@@ -589,5 +656,26 @@
                 font-size: 1rem;
                 bottom: 1rem;
                 right: 1rem;
+            }
+        }
+
+        /* ==================== */
+        /* Accessibility        */
+        /* ==================== */
+
+        /* Respect user preference for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-spin-slow,
+            .animate-float,
+            .animate-pulse-slow,
+            .animate-scroll-indicator,
+            .animated-gradient,
+            .marquee-content,
+            .parallax-bg {
+                animation: none !important;
+                transition: none !important;
+            }
+            .parallax-bg {
+                background-attachment: scroll;
             }
         }
