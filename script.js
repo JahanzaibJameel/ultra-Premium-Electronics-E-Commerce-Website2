@@ -15,54 +15,350 @@ document.addEventListener('DOMContentLoaded', function () {
     const quickViewModal = document.getElementById('quick-view-modal');
     const closeQuickView = document.getElementById('close-quick-view');
     const searchInput = document.getElementById('search-input');
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
 
     // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
+    try {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    } catch (error) {
+        console.error('AOS initialization failed:', error);
+    }
+
+    /* ==================== */
+    /* 1. SCROLL PROGRESS   */
+    /* ==================== */
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+        window.addEventListener('scroll', function () {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+    }
+
+    /* ==================== */
+    /* 2. DARK MODE TOGGLE  */
+    /* ==================== */
+    if (darkModeToggle) {
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Update icon based on theme
+        const icon = darkModeToggle.querySelector('i');
+        if (icon) {
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun text-lg md:text-xl text-gray-700 group-hover:text-indigo-600' : 'fas fa-moon text-lg md:text-xl text-gray-700 group-hover:text-indigo-600';
+        }
+
+        darkModeToggle.addEventListener('click', function () {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            if (icon) {
+                icon.className = newTheme === 'dark' ? 'fas fa-sun text-lg md:text-xl text-gray-700 group-hover:text-indigo-600' : 'fas fa-moon text-lg md:text-xl text-gray-700 group-hover:text-indigo-600';
+            }
+            
+            showToast('Theme changed to ' + newTheme + ' mode', 'success');
+        });
+    }
+
+    /* ==================== */
+    /* 3. MAGNETIC BUTTONS  */
+    /* ==================== */
+    const magneticButtons = document.querySelectorAll('.btn-magnetic');
+    magneticButtons.forEach(button => {
+        button.addEventListener('mousemove', function (e) {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            const moveX = x * 0.2; // Max 20% movement
+            const moveY = y * 0.2;
+            
+            button.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+        
+        button.addEventListener('mouseleave', function () {
+            button.style.transform = 'translate(0, 0)';
+        });
     });
+
+    /* ==================== */
+    /* 4. 3D CARD TILT      */
+    /* ==================== */
+    const tiltCards = document.querySelectorAll('[data-tilt]');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', function (e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg
+            const rotateY = ((x - centerX) / centerX) * 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', function () {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
+
+    /* ==================== */
+    /* 5. NUMBER COUNTING   */
+    /* ==================== */
+    const countElements = document.querySelectorAll('[data-count]');
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+    
+    const countObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                const target = parseInt(entry.target.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    entry.target.textContent = Math.floor(current);
+                }, 16);
+            }
+        });
+    }, observerOptions);
+    
+    countElements.forEach(el => countObserver.observe(el));
+
+    /* ==================== */
+    /* 6. SKELETON REVEAL   */
+    /* ==================== */
+    setTimeout(() => {
+        const skeletons = document.querySelectorAll('.skeleton');
+        skeletons.forEach(skeleton => {
+            skeleton.classList.remove('skeleton');
+            skeleton.classList.add('revealed');
+        });
+    }, 800);
+
+    /* ==================== */
+    /* 7. CONFETTI CANVAS   */
+    /* ==================== */
+    function launchConfetti(x, y) {
+        const canvas = document.createElement('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '9999';
+        document.body.appendChild(canvas);
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const ctx = canvas.getContext('2d');
+        const particles = [];
+        const colors = ['#0066FF', '#8B5CF6', '#FF6B6B', '#F59E0B', '#84CC16'];
+        
+        for (let i = 0; i < 60; i++) {
+            particles.push({
+                x: x,
+                y: y,
+                vx: (Math.random() - 0.5) * 10,
+                vy: (Math.random() - 0.5) * 10 - 5,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                radius: Math.random() * 4 + 2,
+                gravity: 0.3,
+                friction: 0.98
+            });
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            let alive = false;
+            particles.forEach(p => {
+                p.vy += p.gravity;
+                p.vx *= p.friction;
+                p.vy *= p.friction;
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                if (p.y < canvas.height && p.radius > 0.1) {
+                    alive = true;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+                } else {
+                    p.radius *= 0.95;
+                }
+            });
+            
+            if (alive) {
+                requestAnimationFrame(animate);
+            } else {
+                document.body.removeChild(canvas);
+            }
+        }
+        
+        animate();
+    }
+
+    /* ==================== */
+    /* 8. TOAST SYSTEM      */
+    /* ==================== */
+    function showToast(message, type = 'info') {
+        let container = document.getElementById('toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'toast-container';
+            container.className = 'fixed bottom-6 right-6 z-50 space-y-3 pointer-events-none';
+            container.style.bottom = '90px';
+            document.body.appendChild(container);
+        }
+        
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        
+        const icon = type === 'success' ? 'fa-check-circle' : 
+                     type === 'error' ? 'fa-exclamation-circle' : 
+                     'fa-info-circle';
+        
+        toast.innerHTML = `
+            <i class="fas ${icon}"></i>
+            <span>${message}</span>
+        `;
+        
+        container.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.classList.add('removing');
+            setTimeout(() => {
+                if (container.contains(toast)) {
+                    container.removeChild(toast);
+                }
+            }, 300);
+        }, 3000);
+    }
+
+    /* ==================== */
+    /* 9. LIVE STOCK        */
+    /* ==================== */
+    const stockCounters = document.querySelectorAll('.stock-counter');
+    stockCounters.forEach(counter => {
+        setInterval(() => {
+            const current = parseInt(counter.textContent);
+            if (current > 1 && Math.random() > 0.5) {
+                counter.textContent = current - 1;
+            }
+        }, (8 + Math.random() * 7) * 1000);
+    });
+
+    /* ==================== */
+    /* 10. SOCIAL PROOF     */
+    /* ==================== */
+    const socialProofCount = document.querySelector('.social-proof-count');
+    if (socialProofCount) {
+        const baseCount = parseInt(socialProofCount.getAttribute('data-count')) || 247;
+        setInterval(() => {
+            const variation = Math.floor(Math.random() * 7) - 3;
+            const newCount = Math.max(1, baseCount + variation);
+            socialProofCount.textContent = newCount;
+        }, (5 + Math.random() * 5) * 1000);
+    }
+
+    /* ==================== */
+    /* 11. PARALLAX         */
+    /* ==================== */
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    if (parallaxElements.length > 0) {
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            parallaxElements.forEach(el => {
+                const speed = parseFloat(el.getAttribute('data-parallax')) || 0.5;
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+            requestAnimationFrame(updateParallax);
+        }
+        requestAnimationFrame(updateParallax);
+    }
+
+    /* ==================== */
+    /* 12. HERO TEXT REVEAL */
+    /* ==================== */
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const words = heroTitle.querySelectorAll('.kinetic-text');
+        words.forEach((word, index) => {
+            word.style.animationDelay = `${index * 0.1}s`;
+        });
+    }
+
+    /* ==================== */
+    /* 13. BLOB MORPHING    */
+    /* ==================== */
+    const blobs = document.querySelectorAll('.blob');
+    if (blobs.length > 0) {
+        function morphBlobs() {
+            blobs.forEach(blob => {
+                const random = () => Math.floor(Math.random() * 30) + 30;
+                blob.style.borderRadius = `${random()}% ${random()}% ${random()}% ${random()}% / ${random()}% ${random()}% ${random()}% ${random()}%`;
+            });
+        }
+        setInterval(morphBlobs, 3000);
+    }
+
+    /* ==================== */
+    /* EXISTING FEATURES    */
+    /* ==================== */
 
     /**
      * Initialize the featured products carousel
      */
-    const featuredProducts = new Splide('.splide', {
-        type: 'slide',
-        perPage: 4,
-        perMove: 1,
-        gap: '1rem',
-        pagination: false,
-        breakpoints: {
-            1280: {
-                perPage: 3,
-                gap: '1rem'
-            },
-            1024: {
-                perPage: 2,
-                gap: '1rem'
-            },
-            768: {
-                perPage: 2,
-                gap: '0.8rem'
-            },
-            640: {
-                perPage: 1,
-                gap: '0.5rem'
-            },
-            320: {
-                perPage: 1,
-                gap: '0.5rem'
+    try {
+        const featuredProducts = new Splide('.splide', {
+            type: 'slide',
+            perPage: 4,
+            perMove: 1,
+            gap: '1rem',
+            pagination: false,
+            breakpoints: {
+                1280: { perPage: 3, gap: '1rem' },
+                1024: { perPage: 2, gap: '1rem' },
+                768: { perPage: 2, gap: '0.8rem' },
+                640: { perPage: 1, gap: '0.5rem' },
+                320: { perPage: 1, gap: '0.5rem' }
             }
-        }
-    }).mount();
+        }).mount();
+    } catch (error) {
+        console.error('Splide initialization failed:', error);
+    }
 
     /**
      * Toggle mobile menu visibility
      */
-    if (!mobileMenuButton || !mobileMenu) {
-        console.error('Mobile menu elements not found');
-    } else {
+    if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
             mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden') ?
@@ -74,9 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /**
      * Toggle shopping cart sidebar
      */
-    if (!cartButton || !cartSidebar || !closeCartButton || !overlay) {
-        console.error('Cart elements not found');
-    } else {
+    if (cartButton && cartSidebar && closeCartButton && overlay) {
         cartButton.addEventListener('click', function () {
             cartSidebar.classList.remove('translate-x-full');
             overlay.classList.remove('invisible', 'opacity-0');
@@ -155,11 +449,9 @@ document.addEventListener('DOMContentLoaded', function () {
             icon.classList.toggle('fas');
             icon.classList.toggle('text-red-500');
 
-            // Update aria-pressed state
             const isActive = icon.classList.contains('fas');
             this.setAttribute('aria-pressed', isActive);
 
-            // Update wishlist count
             const wishlistCount = document.querySelector('.wishlist-count');
             if (wishlistCount) {
                 let count = parseInt(wishlistCount.textContent);
@@ -167,7 +459,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 wishlistCount.textContent = count;
             }
 
-            // Animate the heart icon
             if (icon.classList.contains('fas')) {
                 icon.classList.add('animate-ping');
                 setTimeout(() => {
@@ -178,31 +469,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     /**
-     * Add product to cart and update count
+     * Add product to cart with confetti and toast
      */
     document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', function () {
-            // Add animation class
+        button.addEventListener('click', function (e) {
             this.classList.add('animate-pulse');
 
-            // Update cart count
             const cartCount = document.querySelector('.cart-count');
             if (cartCount) {
                 let count = parseInt(cartCount.textContent);
                 count = count + 1;
                 cartCount.textContent = count;
 
-                // Animate the cart count
                 cartCount.classList.add('animate-bounce');
                 setTimeout(() => {
                     cartCount.classList.remove('animate-bounce');
                 }, 1000);
             }
 
-            // Remove animation after delay
             setTimeout(() => {
                 this.classList.remove('animate-pulse');
             }, 300);
+            
+            // Launch confetti
+            const rect = this.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            launchConfetti(x, y);
+            
+            // Show toast
+            showToast('Product added to cart!', 'success');
         });
     });
 
@@ -212,41 +508,48 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCartTotal() {
         let subtotal = 0;
 
-        document.querySelectorAll('#cart-sidebar .flex.border-b').forEach(item => {
-            const quantity = parseInt(item.querySelector('.quantity').textContent);
-            const priceText = item.querySelector('.font-medium:last-child').textContent;
-            const price = parseFloat(priceText.replace('$', '').replace(',', ''));
-
-            subtotal += quantity * price;
+        const cartItems = document.querySelectorAll('#cart-sidebar .flex.border-b');
+        cartItems.forEach(item => {
+            const quantityEl = item.querySelector('.quantity');
+            const priceEl = item.querySelector('.cart-item-price');
+            
+            if (quantityEl && priceEl) {
+                const quantity = parseInt(quantityEl.textContent);
+                const priceText = priceEl.textContent;
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                subtotal += quantity * price;
+            }
         });
 
-        // Update subtotal
-        const subtotalElement = document.querySelector('[data-cart-subtotal]');
+        const subtotalElement = document.getElementById('cart-subtotal');
         if (subtotalElement) {
             subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
         }
 
-        // Calculate tax
         const tax = subtotal * TAX_RATE;
-        const taxElement = document.querySelector('[data-cart-tax]');
+        const taxElement = document.getElementById('cart-tax');
         if (taxElement) {
             taxElement.textContent = `$${tax.toFixed(2)}`;
         }
 
-        // Calculate total
         const total = subtotal + tax;
-        const totalElement = document.querySelector('[data-cart-total]');
+        const totalElement = document.getElementById('cart-total');
         if (totalElement) {
             totalElement.textContent = `$${total.toFixed(2)}`;
         }
     }
 
     /**
-     * Update countdown timer display to show time remaining until end of day.
-     * Note: endOfDay is set to today's 23:59:59, so days will always be 0.
-     * This counts down to the end of the current day.
+     * Update countdown timer display
      */
     function updateCountdown() {
+        const daysEl = document.querySelector('.countdown-days');
+        const hoursEl = document.querySelector('.countdown-hours');
+        const minutesEl = document.querySelector('.countdown-minutes');
+        const secondsEl = document.querySelector('.countdown-seconds');
+        
+        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+        
         const now = new Date();
         const endOfDay = new Date();
         endOfDay.setHours(23, 59, 59, 999);
@@ -258,18 +561,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        document.querySelector('.countdown-days').textContent = days.toString().padStart(2, '0');
-        document.querySelector('.countdown-hours').textContent = hours.toString().padStart(2, '0');
-        document.querySelector('.countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-        document.querySelector('.countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+        daysEl.textContent = days.toString().padStart(2, '0');
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minutesEl.textContent = minutes.toString().padStart(2, '0');
+        secondsEl.textContent = seconds.toString().padStart(2, '0');
     }
 
-    // Update countdown every second
     updateCountdown();
     setInterval(updateCountdown, COUNTDOWN_INTERVAL_MS);
 
     /**
-     * Open/close quick view modal with lazy Splide initialization
+     * Quick view modal with lazy Splide initialization
      */
     let galleryInitialized = false;
     let productGallery = null;
@@ -283,45 +585,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 quickViewModal.classList.remove('opacity-0', 'invisible');
                 document.body.style.overflow = 'hidden';
 
-                // Initialize gallery carousels on first open
                 if (!galleryInitialized) {
-                    productGallery = new Splide('.product-gallery', {
-                        type: 'fade',
-                        rewind: true,
-                        pagination: false,
-                        arrows: false,
-                        cover: true,
-                        heightRatio: 0.8
-                    }).mount();
+                    try {
+                        productGallery = new Splide('.product-gallery', {
+                            type: 'fade',
+                            rewind: true,
+                            pagination: false,
+                            arrows: false,
+                            cover: true,
+                            heightRatio: 0.8
+                        }).mount();
 
-                    productThumbnails = new Splide('.product-thumbnails', {
-                        fixedWidth: 80,
-                        fixedHeight: 60,
-                        gap: 10,
-                        rewind: true,
-                        pagination: false,
-                        isNavigation: true,
-                        cover: true,
-                        focus: 'center',
-                        arrows: false,
-                        breakpoints: {
-                            640: {
-                                fixedWidth: 60,
-                                fixedHeight: 45
-                            },
-                            320: {
-                                fixedWidth: 50,
-                                fixedHeight: 40
+                        productThumbnails = new Splide('.product-thumbnails', {
+                            fixedWidth: 80,
+                            fixedHeight: 60,
+                            gap: 10,
+                            rewind: true,
+                            pagination: false,
+                            isNavigation: true,
+                            cover: true,
+                            focus: 'center',
+                            arrows: false,
+                            breakpoints: {
+                                640: { fixedWidth: 60, fixedHeight: 45 },
+                                320: { fixedWidth: 50, fixedHeight: 40 }
                             }
-                        }
-                    }).mount();
+                        }).mount();
 
-                    // Sync the product gallery with thumbnails
-                    productGallery.sync(productThumbnails);
-                    galleryInitialized = true;
+                        productGallery.sync(productThumbnails);
+                        galleryInitialized = true;
+                    } catch (error) {
+                        console.error('Gallery initialization failed:', error);
+                    }
                 }
 
-                // Small delay to allow display to update before animating
                 setTimeout(() => {
                     const modalContent = quickViewModal.querySelector('.relative');
                     if (modalContent) {
@@ -344,10 +641,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
-     * Apply parallax scrolling effect to hero background
+     * Parallax scrolling effect for hero background
      */
     const parallaxBg = document.querySelector('.parallax-bg');
-
     if (parallaxBg) {
         window.addEventListener('scroll', function () {
             const scrollPosition = window.pageYOffset;
@@ -356,20 +652,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
-     * Update CSS custom property for gradient rotation.
-     * Note: This animation loop runs indefinitely for visual effect. In a production app
-     * with route changes, store the rAF ID and cancel on cleanup.
-     */
-    function updateGradientRotation() {
-        document.documentElement.style.setProperty('--gradient-rotation', `${Date.now() / 1000 % 360}deg`);
-        requestAnimationFrame(updateGradientRotation);
-    }
-
-    // Start the gradient animation
-    updateGradientRotation();
-
-    /**
-     * Handle search input and trigger product search on Enter
+     * Handle search input
      */
     if (searchInput) {
         searchInput.addEventListener('keyup', function (e) {
@@ -380,88 +663,58 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
-     * Filter products by category (placeholder implementation)
-     * @param {string} category - The category to filter by
+     * Filter products by category
      */
     function filterProducts(category) {
-        // In a real implementation, this would filter the product list
-
-        // Show loading animation
         const productsContainer = document.querySelector('.products-container');
         if (productsContainer) {
             productsContainer.innerHTML = `
-                        <div class="col-span-4 flex justify-center items-center py-12">
-                            <div class="spinner"></div>
-                        </div>
-                    `;
+                <div class="col-span-4 flex justify-center items-center py-12">
+                    <div class="spinner"></div>
+                </div>
+            `;
 
-            // Simulate API call delay
             setTimeout(() => {
-                // Update products
-                productsContainer.innerHTML = `
-                            <!-- Filtered products would be inserted here -->
-                        `;
-
-                // Animate the update
+                productsContainer.innerHTML = `<!-- Filtered products would be inserted here -->`;
                 AOS.refresh();
             }, 1000);
         }
     }
 
     /**
-     * Sort products by specified criteria (placeholder implementation)
-     * @param {string} sortBy - The sort criteria
+     * Sort products
      */
     function sortProducts(sortBy) {
-        // In a real implementation, this would sort the product list
-
-        // Show loading animation
         const productsContainer = document.querySelector('.products-container');
         if (productsContainer) {
             productsContainer.innerHTML = `
-                        <div class="col-span-4 flex justify-center items-center py-12">
-                            <div class="spinner"></div>
-                        </div>
-                    `;
+                <div class="col-span-4 flex justify-center items-center py-12">
+                    <div class="spinner"></div>
+                </div>
+            `;
 
-            // Simulate API call delay
             setTimeout(() => {
-                // Update products
-                productsContainer.innerHTML = `
-                            <!-- Sorted products would be inserted here -->
-                        `;
-
-                // Animate the update
+                productsContainer.innerHTML = `<!-- Sorted products would be inserted here -->`;
                 AOS.refresh();
             }, 1000);
         }
     }
 
     /**
-     * Search products by query string (placeholder implementation)
-     * @param {string} query - The search query
+     * Search products
      */
     function searchProducts(query) {
-        // In a real implementation, this would search the product catalog
-
         if (query.trim() !== '') {
-            // Show loading animation
             const productsContainer = document.querySelector('.products-container');
             if (productsContainer) {
                 productsContainer.innerHTML = `
-                            <div class="col-span-4 flex justify-center items-center py-12">
-                                <div class="spinner"></div>
-                            </div>
-                        `;
+                    <div class="col-span-4 flex justify-center items-center py-12">
+                        <div class="spinner"></div>
+                    </div>
+                `;
 
-                // Simulate API call delay
                 setTimeout(() => {
-                    // Update products
-                    productsContainer.innerHTML = `
-                                <!-- Search results would be inserted here -->
-                            `;
-
-                    // Animate the update
+                    productsContainer.innerHTML = `<!-- Search results would be inserted here -->`;
                     AOS.refresh();
                 }, 1000);
             }

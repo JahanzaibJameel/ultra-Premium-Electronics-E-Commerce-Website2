@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuantumTech | Futuristic Electronics Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -14,13 +17,10 @@
 </head>
 
 <body class="bg-gray-50 font-sans antialiased text-gray-900 overflow-x-hidden">
-    <!-- Gradient Background Elements -->
-    <div
-        class="fixed -top-96 -left-96 w-[1500px] h-[1500px] bg-gradient-to-br from-indigo-900/10 to-purple-900/10 rounded-full blur-3xl -z-10">
-    </div>
-    <div
-        class="fixed -bottom-96 -right-96 w-[1500px] h-[1500px] bg-gradient-to-br from-blue-900/10 to-emerald-900/10 rounded-full blur-3xl -z-10">
-    </div>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    <!-- Mesh Gradient Background -->
+    <div class="mesh-gradient"></div>
 
     <!-- Announcement Bar with Marquee -->
     <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 overflow-hidden">
@@ -110,6 +110,11 @@
 
                 <!-- Action Icons with Micro-interactions -->
                 <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-5 header-icons">
+                    <button id="dark-mode-toggle"
+                        class="p-1 md:p-2 rounded-full hover:bg-gray-100/50 transition duration-300 relative group header-icon"
+                        aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon text-lg md:text-xl text-gray-700 group-hover:text-indigo-600"></i>
+                    </button>
                     <button
                         class="p-1 md:p-2 rounded-full hover:bg-gray-100/50 transition duration-300 relative group header-icon"
                         aria-label="Search">
@@ -183,62 +188,101 @@
         </div>
     </header>
 
-    <!-- Hero Section with Parallax Effect -->
-    <section class="relative bg-gray-900 text-white overflow-hidden h-[80vh] min-h-[500px] max-h-[900px] hero-section">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-gray-900/0 z-10"></div>
-            <div
-                class="parallax-bg absolute inset-0 bg-[url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center">
-            </div>
-        </div>
+    <!-- Hero Section with Split-Screen Layout -->
+    <section class="relative bg-gray-900 text-white overflow-hidden min-h-screen hero-section">
+        <div class="hero-mesh-bg"></div>
+        
+        <div class="relative z-10 h-full">
+            <div class="container mx-auto px-4 h-full">
+                <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
+                    <!-- Left: Content -->
+                    <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
+                        <span
+                            class="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-float">NEW
+                            COLLECTION 2026</span>
+                        <h1 class="hero-title mb-6">
+                            <span class="kinetic-text">Experience</span>
+                            <span class="kinetic-text">the</span>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 kinetic-text">Quantum</span>
+                            <span class="kinetic-text">Revolution</span>
+                        </h1>
+                        <p class="text-xl mb-8 opacity-90 max-w-lg hero-subtitle">
+                            Cutting-edge technology meets unparalleled performance in our latest lineup of premium
+                            electronics.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-12">
+                            <a href="#"
+                                class="btn-magnetic relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-white transition-all duration-300 ease-out rounded-full shadow-lg group">
+                                <span
+                                    class="absolute inset-0 w-full h-full bg-gradient-to-br from-indigo-600 to-purple-600"></span>
+                                <span class="relative flex items-center">
+                                    <i class="fas fa-shopping-cart mr-2"></i> Shop Now
+                                </span>
+                            </a>
+                            <a href="#"
+                                class="btn-magnetic relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-white transition-all duration-300 ease-out border-2 border-white rounded-full group">
+                                <span class="relative flex items-center">
+                                    <i class="fas fa-play mr-2"></i> Explore
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Trust Badges -->
+                        <div class="flex flex-wrap gap-6 text-sm opacity-80">
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                <span>Secure Checkout</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shipping-fast mr-2"></i>
+                                <span>Free Shipping</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-undo mr-2"></i>
+                                <span>30-Day Returns</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="relative z-10 h-full flex items-center">
-            <div class="container mx-auto px-4 py-16 md:py-24" data-aos="fade-up" data-aos-duration="800">
-                <div class="max-w-2xl">
-                    <span
-                        class="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs md:text-sm font-medium mb-3 md:mb-4">NEW
-                        COLLECTION</span>
-                    <h1
-                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight hero-title">
-                        Experience the <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Quantum</span>
-                        Revolution
-                    </h1>
-                    <p class="text-base md:text-xl mb-6 md:mb-8 opacity-90 max-w-lg hero-subtitle">
-                        Cutting-edge technology meets unparalleled performance in our latest lineup of premium
-                        electronics.
-                    </p>
-                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 hero-buttons">
-                        <a href="#"
-                            class="relative inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 overflow-hidden font-medium text-white transition duration-300 ease-out rounded-full shadow-lg group hero-button">
-                            <span
-                                class="absolute inset-0 w-full h-full bg-gradient-to-br from-indigo-600 to-purple-600"></span>
-                            <span
-                                class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-32 transition-all duration-500 ease-in-out rotate-45 translate-x-24 bg-indigo-700 opacity-30 group-hover:translate-x-0"></span>
-                            <span class="relative flex items-center text-sm md:text-base">
-                                <i class="fas fa-shopping-cart mr-2"></i> Shop Now
-                            </span>
-                        </a>
-                        <a href="#"
-                            class="relative inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-full group hero-button" aria-label="Explore Deals">
-                            <span
-                                class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease"></span>
-                            <span
-                                class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Explore</span>
-                            <span class="relative invisible">Explore Deals</span>
-                        </a>
+                    <!-- Right: 3D Product Showcase -->
+                    <div class="hidden lg:block" data-aos="fade-left" data-aos-duration="800">
+                        <div class="relative h-[600px]">
+                            <div class="product-showcase-3d">
+                                <div class="floating-product-card" style="top: 10%; left: 10%;" data-tilt>
+                                    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=300"
+                                        alt="Product 1" class="w-32 h-32 object-contain">
+                                </div>
+                                <div class="floating-product-card" style="top: 50%; right: 10%;" data-tilt>
+                                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=300"
+                                        alt="Product 2" class="w-40 h-40 object-contain">
+                                </div>
+                                <div class="floating-product-card" style="bottom: 15%; left: 20%;" data-tilt>
+                                    <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=300"
+                                        alt="Product 3" class="w-36 h-36 object-contain">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Scrolling Indicator -->
-        <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-            <div class="w-5 h-8 md:w-6 md:h-10 border-2 border-white rounded-full flex justify-center">
-                <div class="w-1 h-2 bg-white mt-1 md:mt-2 rounded-full animate-scroll-indicator"></div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-2 bg-white mt-2 rounded-full animate-scroll-indicator"></div>
             </div>
         </div>
     </section>
+
+    <!-- Social Proof Bar -->
+    <div class="bg-white py-3 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center gap-2 text-sm text-gray-600">
+                <i class="fas fa-eye text-indigo-600"></i>
+                <span><span class="social-proof-count font-semibold" data-count="247">247</span> people viewing now</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating Categories Bar -->
     <section class="relative z-30 -mt-8 md:-mt-12">
@@ -347,14 +391,15 @@
                         <!-- Product 1 -->
                         <div class="splide__slide">
                             <div
-                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card">
+                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card" data-tilt>
                                 <div class="relative overflow-hidden h-48 sm:h-56 md:h-64">
                                     <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
                                         alt="MacBook Pro"
                                         class="w-full h-full object-contain p-4 md:p-6 transition duration-500 group-hover:scale-105">
                                     <div class="absolute top-2 right-2 md:top-4 md:right-4">
                                         <button
-                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300" aria-label="Add to wishlist" aria-pressed="false">
+                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300"
+                                            aria-label="Add to wishlist" aria-pressed="false">
                                             <i class="far fa-heart text-sm md:text-base"></i>
                                         </button>
                                     </div>
@@ -401,14 +446,15 @@
                         <!-- Product 2 -->
                         <div class="splide__slide">
                             <div
-                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card">
+                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card" data-tilt>
                                 <div class="relative overflow-hidden h-48 sm:h-56 md:h-64">
                                     <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600"
                                         alt="iPhone 14 Pro"
                                         class="w-full h-full object-contain p-4 md:p-6 transition duration-500 group-hover:scale-105">
                                     <div class="absolute top-2 right-2 md:top-4 md:right-4">
                                         <button
-                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-red-500" aria-label="Add to wishlist" aria-pressed="true">
+                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-red-500"
+                                            aria-label="Add to wishlist" aria-pressed="true">
                                             <i class="fas fa-heart text-sm md:text-base"></i>
                                         </button>
                                     </div>
@@ -454,14 +500,15 @@
                         <!-- Product 3 -->
                         <div class="splide__slide">
                             <div
-                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card">
+                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card" data-tilt>
                                 <div class="relative overflow-hidden h-48 sm:h-56 md:h-64">
                                     <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600"
                                         alt="Sony WH-1000XM4"
                                         class="w-full h-full object-contain p-4 md:p-6 transition duration-500 group-hover:scale-105">
                                     <div class="absolute top-2 right-2 md:top-4 md:right-4">
                                         <button
-                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300" aria-label="Add to wishlist" aria-pressed="false">
+                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300"
+                                            aria-label="Add to wishlist" aria-pressed="false">
                                             <i class="far fa-heart text-sm md:text-base"></i>
                                         </button>
                                     </div>
@@ -503,14 +550,15 @@
                         <!-- Product 4 -->
                         <div class="splide__slide">
                             <div
-                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card">
+                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card" data-tilt>
                                 <div class="relative overflow-hidden h-48 sm:h-56 md:h-64">
                                     <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600"
                                         alt="Samsung Galaxy Watch"
                                         class="w-full h-full object-contain p-4 md:p-6 transition duration-500 group-hover:scale-105">
                                     <div class="absolute top-2 right-2 md:top-4 md:right-4">
                                         <button
-                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300" aria-label="Add to wishlist" aria-pressed="false">
+                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300"
+                                            aria-label="Add to wishlist" aria-pressed="false">
                                             <i class="far fa-heart text-sm md:text-base"></i>
                                         </button>
                                     </div>
@@ -556,14 +604,15 @@
                         <!-- Product 5 -->
                         <div class="splide__slide">
                             <div
-                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card">
+                                class="group relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-lg md:hover:shadow-xl transition duration-500 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full flex flex-col product-card" data-tilt>
                                 <div class="relative overflow-hidden h-48 sm:h-56 md:h-64">
                                     <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=600"
                                         alt="Canon EOS R5"
                                         class="w-full h-full object-contain p-4 md:p-6 transition duration-500 group-hover:scale-105">
                                     <div class="absolute top-2 right-2 md:top-4 md:right-4">
                                         <button
-                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300" aria-label="Add to wishlist" aria-pressed="false">
+                                            class="wishlist-toggle bg-white rounded-full p-1 md:p-2 shadow-md text-gray-500 hover:text-red-500 transition duration-300"
+                                            aria-label="Add to wishlist" aria-pressed="false">
                                             <i class="far fa-heart text-sm md:text-base"></i>
                                         </button>
                                     </div>
@@ -1017,7 +1066,8 @@
                 <p class="text-gray-600 text-base md:text-xl mb-6 md:mb-8 newsletter-text">Subscribe to our
                     newsletter for exclusive deals, new product announcements, and tech insights.</p>
 
-                <form class="max-w-md md:max-w-lg mx-auto relative" data-aos="fade-up" data-aos-delay="200" action="#" novalidate>
+                <form class="max-w-md md:max-w-lg mx-auto relative" data-aos="fade-up" data-aos-delay="200" action="#"
+                    novalidate>
                     <div class="relative">
                         <input type="email" id="newsletter-email" placeholder=" "
                             class="peer w-full px-4 py-3 md:py-4 border-0 bg-white/80 rounded-full focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:shadow-lg transition-all duration-300 shadow-md text-sm md:text-base">
@@ -1060,23 +1110,28 @@
                         the future to your doorstep.</p>
                     <div class="flex space-x-3 md:space-x-4">
                         <a href="#"
-                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition duration-300" aria-label="Follow us on Facebook">
+                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition duration-300"
+                            aria-label="Follow us on Facebook">
                             <i class="fab fa-facebook-f text-sm md:text-base"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition duration-300" aria-label="Follow us on Twitter">
+                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition duration-300"
+                            aria-label="Follow us on Twitter">
                             <i class="fab fa-twitter text-sm md:text-base"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition duration-300" aria-label="Follow us on Instagram">
+                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition duration-300"
+                            aria-label="Follow us on Instagram">
                             <i class="fab fa-instagram text-sm md:text-base"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition duration-300" aria-label="Subscribe to our YouTube channel">
+                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition duration-300"
+                            aria-label="Subscribe to our YouTube channel">
                             <i class="fab fa-youtube text-sm md:text-base"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-gray-600 rounded-full flex items-center justify-center transition duration-300" aria-label="Follow us on TikTok">
+                            class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 hover:bg-gray-600 rounded-full flex items-center justify-center transition duration-300"
+                            aria-label="Follow us on TikTok">
                             <i class="fab fa-tiktok text-sm md:text-base"></i>
                         </a>
                     </div>
@@ -1274,7 +1329,7 @@
                 <div class="space-y-2 md:space-y-3 mb-4 md:mb-6">
                     <div class="flex justify-between">
                         <span class="text-gray-600 text-sm md:text-base">Subtotal</span>
-                        <span class="font-medium text-sm md:text-base" data-cart-subtotal>$3,296.00</span>
+                        <span class="font-medium text-sm md:text-base" id="cart-subtotal">$3,296.00</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-600 text-sm md:text-base">Shipping</span>
@@ -1282,11 +1337,11 @@
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-600 text-sm md:text-base">Tax</span>
-                        <span class="font-medium text-sm md:text-base" data-cart-tax>$263.68</span>
+                        <span class="font-medium text-sm md:text-base" id="cart-tax">$263.68</span>
                     </div>
                     <div class="flex justify-between text-base md:text-lg font-bold pt-2 md:pt-3">
                         <span>Total</span>
-                        <span data-cart-total>$3,559.68</span>
+                        <span id="cart-total">$3,559.68</span>
                     </div>
                 </div>
 
@@ -1418,9 +1473,11 @@
                             <label class="block text-sm font-medium text-gray-700 mb-1">Color</label>
                             <div class="flex space-x-2">
                                 <button
-                                    class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-900 border-2 border-transparent hover:border-gray-900 focus:border-gray-900 focus:outline-none" aria-label="Space Gray"></button>
+                                    class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-900 border-2 border-transparent hover:border-gray-900 focus:border-gray-900 focus:outline-none"
+                                    aria-label="Space Gray"></button>
                                 <button
-                                    class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-200 border-2 border-transparent hover:border-gray-900 focus:border-gray-900 focus:outline-none" aria-label="Silver"></button>
+                                    class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-200 border-2 border-transparent hover:border-gray-900 focus:border-gray-900 focus:outline-none"
+                                    aria-label="Silver"></button>
                             </div>
                         </div>
 
@@ -1478,6 +1535,17 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Live Chat Bubble -->
+    <button id="live-chat-bubble"
+        class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-all duration-300 z-50 flex items-center justify-center">
+        <i class="fas fa-comments text-2xl"></i>
+        <span class="live-chat-pulse"></span>
+    </button>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-3 pointer-events-none" style="bottom: 90px;">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./script.js"></script>
