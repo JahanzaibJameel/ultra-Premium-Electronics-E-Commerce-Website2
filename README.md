@@ -1,349 +1,685 @@
-# ⚛️ QuantumTech — Futuristic Electronics Marketplace
+# ⚛️ QuantumTech
 
-<div align="center">
+### Obsidian & Gold — A Dark Luxury Electronics Marketplace
 
-**A modern, high-performance electronics storefront landing page built for the future of e-commerce.**
+**Where cutting-edge technology meets uncompromising craft.**
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge\&logo=tailwind-css\&logoColor=white)](https://tailwindcss.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Splide](https://img.shields.io/badge/Splide-FF6B6B?style=for-the-badge\&logo=carousel\&logoColor=white)](https://splidejs.com/)
-[![AOS](https://img.shields.io/badge/AOS-Animate%20On%20Scroll-7C3AED?style=for-the-badge)](https://michalsnik.github.io/aos/)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge\&logo=fontawesome\&logoColor=white)](https://fontawesome.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-</div>
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-C9A227?style=flat-square)](./LICENSE)
 
 ---
 
-## 📑 Table of Contents
+## 📖 Table of Contents
 
-* [🌟 Overview](#-overview)
-* [✨ Features](#-features)
-* [🛠️ Tech Stack](#️-tech-stack)
-* [🚀 Getting Started](#-getting-started)
-* [📁 Project Structure](#-project-structure)
-* [🎨 Customization Guide](#-customization-guide)
-* [📱 Responsive Behavior](#-responsive-behavior)
-* [🌐 Browser Support](#-browser-support)
-* [🧪 Performance & Accessibility](#-performance--accessibility)
-* [🚀 Deployment](#-deployment)
-* [🤝 Contributing](#-contributing)
-* [🔮 Roadmap](#-roadmap)
-* [📄 License](#-license)
-* [🙏 Acknowledgments](#-acknowledgments)
-
----
-
-## 🌟 Overview
-
-**QuantumTech** is a sleek, responsive, and interactive electronics marketplace landing page. It combines modern design trends such as **glassmorphism**, **parallax scrolling**, **3D transforms**, **animated gradients**, and **micro-interactions** to deliver a futuristic shopping experience.
-
-Built with pure **HTML**, **Tailwind CSS**, and **vanilla JavaScript**, it requires **no build step** and runs instantly in any modern browser. It is perfect for prototyping, learning, or serving as a production-ready static storefront foundation.
+- [Overview](#-overview)
+- [Quick Start](#-quick-start)
+- [File Structure](#-file-structure)
+- [Features](#-features)
+- [Design System](#-design-system)
+- [Responsive Breakpoints](#-responsive-breakpoints)
+- [Component Reference](#-component-reference)
+- [Interactive Behaviors](#-interactive-behaviors)
+- [Customization Guide](#-customization-guide)
+- [Accessibility](#-accessibility)
+- [Performance](#-performance)
+- [Browser Support](#-browser-support)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [Credits](#-credits)
+- [License](#-license)
 
 ---
 
-## ✨ Features
+## 🌑 Overview
 
-| Feature                             | Description                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------- |
-| 🚀 **Announcement Marquee**         | Smooth infinite-scrolling promotions bar.                                    |
-| 🧊 **Glassmorphism Header**         | Sticky navigation with backdrop blur and gradient highlights.                |
-| 🔍 **Floating Label Search**        | Elegant search input with animated focus states.                             |
-| 🛒 **Interactive Cart Sidebar**     | Slide-out cart with quantity controls, promo code field, and dynamic totals. |
-| ❤️ **Wishlist Toggle**              | Heart micro-interaction with count badge.                                    |
-| 🎠 **Splide Carousel**              | Responsive featured products slider with breakpoints.                        |
-| 🧊 **3D Tech Showcase**             | Rotating image card with perspective and backface visibility.                |
-| ⏳ **Live Countdown Timer**          | Real-time sales deadline countdown.                                          |
-| 🧪 **Product Quick View Modal**     | Gallery sync, options selection, and add-to-cart functionality.              |
-| 📱 **Mobile-First Navigation**      | Slide-down menu with smooth animations.                                      |
-| ✨ **Scroll Animations (AOS)**       | Fade, slide, and reveal effects on scroll.                                   |
-| 🎨 **Dynamic Gradient Backgrounds** | Continuously rotating hue effects.                                           |
-| 🖱️ **Custom Scrollbar**            | Styled scrollbar for an enhanced user experience.                            |
-| 🔝 **Back-to-Top Button**           | Floating button that appears after scrolling.                                |
-| 🌙 **Noise Texture Overlay**        | Subtle grain effect for a modern aesthetic.                                  |
-| 🧩 **Semantic & Accessible**        | ARIA labels, keyboard navigation, and clean HTML structure.                  |
+**QuantumTech** is a premium electronics marketplace reimagined through a dark luxury aesthetic. Moving beyond conventional indigo-purple gradients, the design embraces the visual language of high-end horology and contemporary luxury: obsidian surfaces, champagne-gold accents, elegant Cormorant Garamond typography, and carefully restrained motion.
 
----
+Product photography is presented on studio-white plates, creating a striking contrast against the ink-black interface. Every visual detail follows a unified design language, resulting in a storefront that feels more like an exclusive boutique than a conventional marketplace.
 
-## 🛠️ Tech Stack
+> **Design Philosophy:** Luxury is not more. Luxury is less, executed precisely.
 
-| Layer         | Technology                      | Version |
-| ------------- | ------------------------------- | ------- |
-| Markup        | HTML5                           | Latest  |
-| Styling       | Tailwind CSS + Custom CSS       | 2.2+    |
-| Interactivity | Vanilla JavaScript (ES6+)       | —       |
-| Carousel      | Splide.js                       | v4      |
-| Animations    | AOS (Animate On Scroll)         | 2.3.1   |
-| Icons         | Font Awesome                    | 6.0+    |
-| Fonts         | Google Fonts — Poppins          | —       |
-| Hosting       | Netlify / Vercel / GitHub Pages | —       |
+### What It Is
+
+- A complete standalone marketplace homepage.
+- A premium dark-themed electronics storefront.
+- A collection of modern UI components and interactive shopping experiences.
+- A ground-up redesign built around an Obsidian & Gold design system.
+- A zero-build, zero-framework frontend experience.
+
+### What It Isn't
+
+- A production backend or database.
+- A complete payment processing system.
+- A real inventory management platform.
+- A fully integrated authentication system.
+
+Cart, wishlist, and search interactions are frontend-only and maintain state in memory.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
-
-* A modern web browser such as Chrome, Edge, Firefox, Safari, or Opera.
-* Optional: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VS Code extension.
-
-### Installation
-
-#### 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2.git
+git clone https://github.com/your-org/quantumtech.git
 cd quantumtech
 ```
 
-#### 2. Open the Project
+### 2. Open the Project
 
-Simply open `index.html` in your browser.
-
-Alternatively, run a local development server:
+**Windows:**
 
 ```bash
-# Using Python 3
-python -m http.server 8000
+start index.html
 ```
 
-Then visit:
+**macOS:**
+
+```bash
+open index.html
+```
+
+**Linux:**
+
+```bash
+xdg-open index.html
+```
+
+No npm installation, build process, or environment variables are required.
+
+### 3. Run a Local Development Server (Optional)
+
+Using Python:
+
+```bash
+python3 -m http.server 8000
+```
+
+Or using Node.js:
+
+```bash
+npx serve .
+```
+
+Open the following address:
 
 ```text
 http://localhost:8000
 ```
 
-No build step or dependency installation is required. That's it! 🎉
+**Note:** Running through a local server is recommended for consistent browser behavior, especially for media and clipboard functionality.
 
 ---
 
-## 📁 Project Structure
+## 📁 File Structure
 
 ```text
 quantumtech/
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS and animations
-├── script.js           # JavaScript interactions
-└── README.md           # Project documentation
+│
+├── index.html          # Complete single-page storefront
+├── styles.css          # Design system and responsive styling
+├── script.js           # Interactive functionality
+│
+├── README.md           # Project documentation
+├── LICENSE             # MIT License
+│
+└── assets/
+    ├── products/       # Product photography
+    ├── hero/           # Hero section assets
+    └── testimonials/   # Testimonial images
 ```
 
-### Description of Files
+### Project Files
 
-| File         | Description                                                                                                                                                                                                                                                                                                       |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `index.html` | Complete markup for the landing page, including header, hero, categories, featured products, tech showcase, sale banner, comparison table, testimonials, newsletter, footer, cart sidebar, quick-view modal, and overlays.                                                                                        |
-| `styles.css` | Custom styles layered on top of Tailwind CSS. Defines animations, 3D perspective utilities, gradient backgrounds, scrollbar styling, and responsive adjustments.                                                                                                                                                  |
-| `script.js`  | Handles AOS and Splide initialization, mobile navigation, cart sidebar, back-to-top functionality, quantity adjustment, wishlist toggles, add-to-cart animations, dynamic cart totals, countdown timer, quick-view modal, product gallery synchronization, parallax scrolling, filtering, and search simulations. |
+| File | Approx. Lines | Responsibility |
+|---|---:|---|
+| `index.html` | 1,700 | Semantic structure and page sections |
+| `styles.css` | 950 | Design tokens, components and responsive layouts |
+| `script.js` | 450 | Interactions, cart logic, animations and countdown |
 
 ---
 
-## 🎨 Customization Guide
+## ✨ Features
 
-### 🎨 Change Colors
+### 🎨 Visual Design
 
-Edit Tailwind utility classes directly inside `index.html`.
+- **Obsidian Color Palette:** Layered near-black surfaces create depth and visual hierarchy.
+- **Champagne Gold Accents:** A unified gold gradient powers buttons, badges, highlights and interactive elements.
+- **Studio-Plate Photography:** Product images sit against elegant radial backgrounds.
+- **Film-Grain Texture:** A subtle noise overlay adds visual depth.
+- **Dual Typography:** Cormorant Garamond for editorial headings and Inter for functional interface elements.
+- **Ambient Mesh Gradients:** Subtle animated lighting creates atmosphere without overwhelming the interface.
 
-**Example:** Replace `indigo-600` with `emerald-600`.
+### ⚡ Interaction & Motion
 
-```diff
-- <button class="bg-indigo-600 hover:bg-indigo-700">
-+ <button class="bg-emerald-600 hover:bg-emerald-700">
-```
+- Magnetic hero buttons with cursor-responsive movement.
+- Interactive 3D product-card tilt effects.
+- Kinetic hero typography with blur-to-sharp reveal animations.
+- Canvas-based gold confetti animations.
+- Animated stock counters.
+- Dynamic social-proof ticker.
+- Real-time countdown timer.
+- Glass-style toast notifications.
 
-### 🛍️ Update Product Data
+### 🛒 E-Commerce Interface
 
-Product cards are defined in the **Featured Products** section.
+- Slide-in shopping cart drawer.
+- Interactive product quantity controls.
+- Automatic subtotal, tax and total calculations.
+- Product quick-view modal.
+- Synchronized product gallery and thumbnails.
+- Interactive wishlist functionality.
+- Latest Arrivals carousel powered by Splide.
+- Promotional code input interface.
 
-To add or modify products:
+### 📱 Responsive Experience
 
-1. Duplicate a `.splide__slide` block.
-2. Update the product image URL.
-3. Change the product name.
-4. Update the price.
-5. Modify the product badge.
-6. Update the rating and other product information.
+- Eight individually tuned responsive breakpoints.
+- Adaptive product grids and navigation.
+- Touch-device-aware interactions.
+- Responsive hero layouts.
+- Mobile-friendly product browsing.
+- Landscape and short-viewport optimizations.
+- Reduced-motion support.
 
-The same approach can be used for the comparison table and cart items.
+### ♿ Accessibility
 
-### ⏳ Modify Countdown Timer
-
-In `script.js`, the `updateCountdown()` function calculates the remaining time until the end of the current day.
-
-Replace:
-
-```javascript
-const endOfDay = new Date();
-endOfDay.setHours(23, 59, 59, 999);
-```
-
-with a custom date:
-
-```javascript
-const endOfDay = new Date('2026-12-31T23:59:59');
-```
-
-### 🔌 Integrate a Real Backend
-
-Replace placeholder functions such as:
-
-```javascript
-searchProducts
-filterProducts
-sortProducts
-```
-
-with actual API integrations using `fetch()` or Axios.
-
-The current implementation simulates product loading with a spinner and placeholder behavior.
+- Visible keyboard focus indicators.
+- ARIA labels for icon-only controls.
+- Keyboard-accessible overlays.
+- Escape-key support for closing overlays.
+- Semantic HTML landmarks.
+- Accessible wishlist states.
+- Reduced-motion preferences respected.
 
 ---
 
-## 📱 Responsive Behavior
+## 🎨 Design System
 
-| Breakpoint               | Behavior                                                                               |
-| ------------------------ | -------------------------------------------------------------------------------------- |
-| **Desktop (≥1280px)**    | Full navigation, four-column carousel, and side-by-side layouts.                       |
-| **Tablet (768–1024px)**  | Collapsed navigation, two-column carousel, and adjusted spacing.                       |
-| **Mobile (<768px)**      | Hamburger menu, single-column carousel, stacked sections, and full-width cart sidebar. |
-| **Ultra-small (≤320px)** | Condensed typography, smaller icons, and optimized grids.                              |
+### Color Palette
+
+The Obsidian & Gold design system uses a carefully controlled palette of dark surfaces, champagne-gold accents and muted typography.
+
+#### Obsidian Surfaces
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--ink-000` | `#050506` | Absolute black |
+| `--ink-050` | `#08080A` | Main background |
+| `--ink-100` | `#0C0C0F` | Section surfaces |
+| `--ink-150` | `#101014` | Card surfaces |
+| `--ink-200` | `#141419` | Elevated surfaces |
+| `--ink-300` | `#1A1A20` | Hover states |
+
+#### Champagne Gold Accents
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--gold-050` | `#FBF6E4` | Highlight text |
+| `--gold-200` | `#EDDFAE` | Product prices |
+| `--gold-400` | `#D8BE72` | Links and icons |
+| `--gold-500` | `#C9A227` | Primary accent |
+| `--gold-600` | `#A8851C` | Gradient start |
+| `--gold-800` | `#6E5813` | Gradient end |
+
+#### Typography Colors
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--text-hi` | `#F3F0E9` | Primary headings |
+| `--text` | `#C6C2B9` | Body text |
+| `--text-mid` | `#8B877E` | Secondary text |
+| `--text-low` | `#5C5952` | Tertiary text |
+
+### Signature Gold Gradient
+
+```css
+--grad-gold: linear-gradient(
+    135deg,
+    #6E5813 0%,
+    #C9A227 28%,
+    #EDDFAE 50%,
+    #C9A227 72%,
+    #6E5813 100%
+);
+```
+
+### Studio Photography Background
+
+```css
+--plate: radial-gradient(
+    ellipse at 50% 32%,
+    #FBFAF7 0%,
+    #EDEBE5 52%,
+    #DCD9D0 100%
+);
+```
+
+### Typography System
+
+| Role | Font Family | Weight |
+|---|---|---|
+| Display headings | Cormorant Garamond | 300–500 |
+| Body text | Inter | 300 |
+| UI labels | Inter | 500 |
+| Numbers | Inter | 500 |
+
+### Motion & Animation
+
+```css
+--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+--ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+```
+
+---
+
+## 📐 Responsive Breakpoints
+
+| Breakpoint | Width | Layout Behavior |
+|---|---|---|
+| XS | 320–399px | Single-column layout and stacked CTAs |
+| SM | 400–639px | Two-column category rail |
+| MD | 640–767px | Bento grid and two-column testimonials |
+| LG | 768–1023px | Two-column product carousel |
+| XL | 1024–1279px | Desktop navigation and compact search |
+| 2XL | 1280–1535px | Full navigation and search |
+| 3XL | 1536–1919px | Expanded spacing |
+| 4XL | 1920px+ | Capped hero height and scalable typography |
+
+### Special Responsive Rules
+
+- Landscape phones: Hero height adjusts automatically.
+- Short laptops: Vertical hero padding is reduced.
+- Ultra-narrow screens: Typography and logo dimensions scale down.
+- Touch devices: Magnetic buttons, card tilt and hover overlays are disabled.
+
+---
+
+## 🧩 Component Reference
+
+### 1. Announcement Marquee
+
+A full-width scrolling announcement bar with duplicated tracks for a seamless infinite animation.
+
+### 2. Sticky Glass Header
+
+A sticky navigation header featuring backdrop blur, a subtle gradient divider, navigation links, search and interactive icon buttons.
+
+### 3. Hero Section
+
+A responsive split-screen layout featuring editorial typography, animated text, primary and secondary CTAs, trust indicators and floating product cards.
+
+### 4. Category Rail
+
+A six-item category grid with icon containers, uppercase labels and gold hover effects.
+
+### 5. Bento Product Grid
+
+A mixed-span CSS grid with large, regular and wide product-card variations.
+
+### 6. Latest Arrivals Carousel
+
+A five-card horizontal product carousel powered by Splide with responsive breakpoint configuration.
+
+### 7. Mega Sale Banner
+
+A promotional section featuring a countdown timer, dark gradient background and highlighted product imagery.
+
+### 8. Product Comparison Table
+
+A structured comparison interface with a sticky label column and horizontal scrolling on smaller screens.
+
+### 9. Testimonials
+
+Three testimonial cards featuring customer photography, quotation marks and star ratings.
+
+### 10. Cart Drawer & Quick-View Modal
+
+Interactive overlays featuring product details, synchronized galleries, quantity controls and cart calculations.
+
+---
+
+## 🎬 Interactive Behaviors
+
+| Trigger | Behavior |
+|---|---|
+| Page scroll | Gold progress indicator |
+| Product mouse movement | 3D perspective tilt |
+| Hero button movement | Magnetic cursor interaction |
+| Add to Cart | Confetti animation, cart update and toast |
+| Wishlist click | Heart animation and wishlist counter |
+| Cart button | Opens the shopping cart drawer |
+| Quick View | Opens the product details modal |
+| Quantity controls | Recalculates subtotal, tax and total |
+| Countdown | Updates every second |
+| Stock counter | Simulates changing stock availability |
+| Search Enter | Displays a toast notification |
+
+---
+
+## 🛠 Customization Guide
+
+### Change the Accent Color
+
+Update the gold design tokens in `styles.css`:
+
+```css
+:root {
+    --gold-200: #B8E0E8;
+    --gold-400: #7EC8D4;
+    --gold-500: #4FA8B8;
+    --gold-600: #2F7F8E;
+    --gold-800: #1A4A55;
+}
+```
+
+All components using these tokens automatically inherit the new accent color.
+
+### Change the Display Font
+
+Update the Google Fonts import:
+
+```css
+@import url(
+    'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap'
+);
+```
+
+Then update the display font variable:
+
+```css
+--font-display: 'Playfair Display', serif;
+```
+
+### Add a New Product
+
+Duplicate an existing product-card element in `index.html` and update:
+
+- Product image and alt text.
+- Product name.
+- Product price.
+- Product details.
+- Add-to-cart button.
+
+The existing JavaScript event handlers bind to the relevant CSS classes.
+
+### Adjust the Tax Rate
+
+Update the tax constant in `script.js`:
+
+```javascript
+const TAX_RATE = 0.08;
+```
+
+For a 10% tax rate:
+
+```javascript
+const TAX_RATE = 0.10;
+```
+
+### Customize the Product Photography Background
+
+```css
+:root {
+    --plate: linear-gradient(
+        180deg,
+        #F0EDE6 0%,
+        #D8D3C6 100%
+    );
+}
+```
+
+---
+
+## ♿ Accessibility
+
+The project targets WCAG 2.1 AA accessibility principles across its interactive interface.
+
+### Implemented
+
+- Color contrast targets.
+- Visible `:focus-visible` indicators.
+- ARIA labels for icon-only buttons.
+- Accessible wishlist states.
+- Semantic HTML structure.
+- Keyboard-accessible overlay controls.
+- Reduced-motion support.
+
+### Known Limitations
+
+- Modal focus trapping is not yet implemented.
+- Keyboard focus can leave the quick-view modal.
+
+### Recommended Testing
+
+Use Chrome Lighthouse and axe DevTools to evaluate accessibility and usability.
+
+Target Lighthouse accessibility score: **95+**.
+
+---
+
+## ⚡ Performance
+
+### Approximate Asset Sizes
+
+| Asset | Size |
+|---|---:|
+| `index.html` | 68 KB |
+| `styles.css` | 32 KB |
+| `script.js` | 14 KB |
+| Local total | 114 KB |
+| Google Fonts | 90 KB |
+
+### Existing Optimizations
+
+- Zero dependencies for core interactive behavior.
+- CSS custom properties for shared design tokens.
+- `font-display: swap`.
+- Font preconnect hints.
+- IntersectionObserver for scroll-triggered animations.
+- `requestAnimationFrame` for animations.
+- Lazy-loaded product imagery.
+- Transform-based animation techniques.
+
+### Recommended Production Optimizations
+
+- Minify CSS and JavaScript.
+- Host fonts locally.
+- Convert product images to WebP or AVIF.
+- Preload the hero image.
+- Self-host Splide.
+- Inline critical above-the-fold CSS.
 
 ---
 
 ## 🌐 Browser Support
 
-| Browser          | Supported |
-| ---------------- | --------- |
-| Chrome (latest)  | ✅         |
-| Firefox (latest) | ✅         |
-| Safari (latest)  | ✅         |
-| Edge (latest)    | ✅         |
-| Opera (latest)   | ✅         |
+| Browser | Minimum Version |
+|---|---|
+| Chrome | 90+ |
+| Microsoft Edge | 90+ |
+| Firefox | 88+ |
+| Safari | 14+ |
+| Safari iOS | 14+ |
+| Samsung Internet | 15+ |
+| Chrome Android | 90+ |
+| Internet Explorer | Not supported |
+
+The interface is designed for modern browsers supporting CSS Grid, backdrop filters, IntersectionObserver and contemporary JavaScript features.
 
 ---
 
-## 🧪 Performance & Accessibility
+## 🗺 Roadmap
 
-### Performance
+### v2.1 — Accessibility Improvements
 
-* Assets loaded via CDNs.
-* Browser-native lazy loading for images where applicable.
-* Lightweight vanilla JavaScript.
-* Zero build overhead.
-* Optimized for fast browser execution.
+- [ ] Implement focus trapping in cart and quick-view overlays.
+- [ ] Add an ARIA live region for cart updates.
+- [ ] Introduce a skip-to-content link.
+- [ ] Improve countdown screen-reader announcements.
 
-| Metric                 | Target  |
-| ---------------------- | ------- |
-| Lighthouse Performance | ≥ 95    |
-| First Contentful Paint | ≤ 1.2s  |
-| Time to Interactive    | ≤ 2.0s  |
-| Total Bundle Size      | ≤ 150KB |
+### v2.2 — E-Commerce Integration
 
-### Accessibility
+- [ ] Integrate a backend API for cart persistence.
+- [ ] Implement real inventory management.
+- [ ] Add promotional-code validation.
+- [ ] Integrate a checkout solution.
 
-* Semantic HTML5 structure.
-* ARIA labels on interactive icon buttons.
-* Keyboard-friendly focus states.
-* Descriptive `alt` attributes on images.
-* Responsive layouts across all screen sizes.
+### v2.3 — Performance Improvements
 
-> **Recommendation:** Add a `prefers-reduced-motion` media query in `styles.css` to disable animations for users who prefer reduced motion.
+- [ ] Host fonts locally.
+- [ ] Implement WebP and AVIF image optimization.
+- [ ] Self-host Splide.
+- [ ] Optimize critical CSS delivery.
 
-```css
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-```
+### v3.0 — Marketplace Expansion
 
-## 🚀 Deployment
-
-### Option 1: GitHub Pages
-
-1. Push the project to a `gh-pages` branch.
-2. Go to **Settings → Pages**.
-3. Select the `gh-pages` branch.
-4. Save and wait for deployment.
-
-### Option 2: Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2)
-
-### Option 3: Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2)
+- [ ] Product detail page template.
+- [ ] Category listing page template.
+- [ ] Multi-theme support.
+- [ ] PWA manifest and service worker.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community amazing. Any contributions you make are **greatly appreciated**.
+Contributions are welcome. This project follows a focused development approach that prioritizes maintainability and carefully scoped improvements.
 
-1. Fork the project.
-2. Create your feature branch:
+### Contribution Workflow
 
-```bash
-git checkout -b feature/AmazingFeature
-```
-
-3. Commit your changes:
+**1. Fork the repository**
 
 ```bash
-git commit -m "Add some AmazingFeature"
+git clone https://github.com/JahanzaibJameel/ultra-Premium-Electronics-E-Commerce-Website2.git
 ```
 
-4. Push to the branch:
+**2. Create a feature branch**
 
 ```bash
-git push origin feature/AmazingFeature
+git checkout -b feat/your-feature-name
 ```
 
-5. Open a Pull Request.
+**3. Implement your changes**
 
-Please ensure your code follows the existing style and passes basic checks.
+Keep modifications focused and consistent with the existing design system.
+
+**4. Test your changes**
+
+Verify responsive layouts, interactions and browser compatibility.
+
+**5. Commit your changes**
+
+```bash
+git commit -m "feat(cart): add empty-state illustration"
+```
+
+**6. Push your branch**
+
+```bash
+git push origin feat/your-feature-name
+```
+
+### Commit Convention
+
+| Type | Description |
+|---|---|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `style` | Visual improvements |
+| `refactor` | Code restructuring |
+| `docs` | Documentation updates |
+| `perf` | Performance improvements |
+| `a11y` | Accessibility improvements |
+
+### Before Submitting a Pull Request
+
+- [ ] Test at 320px, 375px, 768px, 1024px, 1440px and 1920px.
+- [ ] Test in Chrome, Firefox and Safari.
+- [ ] Check for console errors and warnings.
+- [ ] Verify accessibility.
+- [ ] Confirm reduced-motion behavior.
+- [ ] Test touch-device interactions.
+
+### Code Style
+
+- **CSS:** Alphabetical property ordering and consistent spacing.
+- **JavaScript:** `const` and `let`, arrow functions, four-space indentation and single quotes.
+- **HTML:** Semantic elements, accessible attributes and no unnecessary inline styles.
 
 ---
 
-## 🔮 Roadmap — 2026
+## 🎨 Credits
 
-* [ ] **AI-Powered Product Recommendations** — ML-based suggestions from browsing behavior.
-* [ ] **Web3 Payment Gateway** — Support crypto payments through MetaMask and WalletConnect.
-* [ ] **AR/VR Product Previews** — WebXR for immersive product visualization.
-* [ ] **PWA Support** — Offline access and installability.
-* [ ] **Dark/Light Mode Toggle** — User-controlled theme switching.
-* [ ] **Voice Search** — Speech recognition for hands-free product discovery.
-* [ ] **Real-Time Inventory** — Connect to a backend API for live stock status.
+### Design & Development
+
+- Design System: Obsidian & Gold.
+- Project: QuantumTech Marketplace.
+- Design Direction: Dark luxury, champagne-gold accents and editorial typography.
+
+### Third-Party Resources
+
+| Resource | Source | License |
+|---|---|---|
+| Cormorant Garamond | Google Fonts | SIL OFL 1.1 |
+| Inter | Google Fonts | SIL OFL 1.1 |
+| Font Awesome 6 | Font Awesome | CC BY 4.0 / MIT |
+| Tailwind CSS 2.2 | Tailwind CSS | MIT |
+| Splide 4.1 | Splide | MIT |
+| AOS | Animate On Scroll | MIT |
+| Product Photography | Pexels | Pexels License |
+| Noise Texture | Grainy Gradients | Public |
+
+### Design Inspirations
+
+- **Aesop:** Restrained typography and editorial presentation.
+- **Bang & Olufsen:** Minimalist hardware presentation.
+- **Mr Porter:** Editorial e-commerce layouts.
+- **Hermès:** Consistency and discipline in luxury branding.
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**.
+This project is licensed under the MIT License.
 
-See the `LICENSE` file for more information.
+```text
+MIT License
 
----
+Copyright (c) 2026 QuantumTech
 
-## 🙏 Acknowledgments
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework.
-* [Splide](https://splidejs.com/) — Lightweight and flexible carousel.
-* [AOS](https://michalsnik.github.io/aos/) — Animate On Scroll library.
-* [Font Awesome](https://fontawesome.com/) — Icon library.
-* [Google Fonts](https://fonts.google.com/) — Poppins typeface.
-* [Pexels](https://www.pexels.com/) — Placeholder images.
-* [Grainy Gradients](https://grainy-gradients.vercel.app/) — Noise SVG texture.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ---
 
 <div align="center">
 
-Made with 💜 and a lot of ☕ by <a href="https://github.com/JahanzaibJameel">Muhammad Jahanzaib Jameel</a>
+**⚛️ QuantumTech**
 
-<br />
+*Crafted with restraint, in obsidian and gold.*
 
-<sub>© 2026 QuantumTech. All rights reserved.</sub>
+If this project helped you, consider giving it a ⭐ on GitHub.
+
+**Back to Top ↑**
 
 </div>
